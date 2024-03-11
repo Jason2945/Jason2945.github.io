@@ -1,6 +1,6 @@
 import React from "react";
 import { Chrono } from "react-chrono";
-import { journeyInfo } from "./journey_info";
+import { journeyInfo } from "./database/journey_info";
 import background_img from "../imgs/background.gif"
 import Navbar from './navbar';
 
