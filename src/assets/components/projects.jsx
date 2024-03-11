@@ -1,7 +1,7 @@
 import { Link, Outlet, useLocation } from 'react-router-dom';
 import { useState } from 'react';
 
-import videoBG from '../imgs/video_bg.mp4'
+import background_img from "../imgs/background.gif"
 import Navbar from './navbar';
 
 export default function Projects(){
@@ -19,7 +19,7 @@ export default function Projects(){
             <Navbar/>
             {/* Load in the video background */}
             <div className="project_overlay"></div>
-            <video className='background' src={videoBG} autoPlay loop muted />
+            <img className='background' src={background_img} />
 
             {/* Load in the content */}
             <div className="project_links">

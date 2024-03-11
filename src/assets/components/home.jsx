@@ -1,4 +1,4 @@
-import videoBG from '../imgs/video_bg.mp4'
+import background_img from "../imgs/background.gif"
 import Navbar from './navbar';
 
 export default function Home() {
@@ -9,7 +9,7 @@ export default function Home() {
         <Navbar/>
         {/* Load in the video background */}
         <div className="home_overlay"></div>
-        <video className='background' src={videoBG} autoPlay loop muted />
+        <img className='background' src={background_img} />
         {/* Display the content */}
         <div className="homepage_content">
           <h1>Welcome To My Portfolio!</h1>

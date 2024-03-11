@@ -1,7 +1,7 @@
 import React from "react";
 import { Chrono } from "react-chrono";
 import { journeyInfo } from "./journey_info";
-import videoBG from '../imgs/video_bg.mp4'
+import background_img from "../imgs/background.gif"
 import Navbar from './navbar';
 
 export default function Journey(){
@@ -11,7 +11,7 @@ export default function Journey(){
             <Navbar/>
             {/* Load in the video background */}
             <div className="project_overlay"></div>
-            <video className='background' src={videoBG} autoPlay loop muted />
+            <img className='background' src={background_img} />
             {/* Load in the content */}
             <div className="timeline">
                 <Chrono 
@@ -22,6 +22,8 @@ export default function Journey(){
                         primary: 'yellow',
                         secondary: 'none',
                         cardBgColor: 'none',
+                        titleColor: 'aquamarine',
+                        titleColorActive: 'yellow',
                         cardTitleColor: '#F4AC45',
                         cardSubtitleColor: '#DAD6D6',
                         cardDetailsColor: '#DAD6D6',   
