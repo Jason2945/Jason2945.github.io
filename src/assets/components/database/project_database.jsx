@@ -15,7 +15,7 @@ export const project_database = [
                 <li>HTML <img src={html_logo}/></li>
                 <li>CSS <img src={css_logo}/></li>
                 <li>JavaScript <img src={js_logo}/></li>
-                <li><a href="https://www.vecteezy.com/free-videos/background">Video Background from Vecteezy</a></li>
+                <li><a href="https://react-chrono.prabhumurthy.com/">Chrono React to make Timeline</a></li>
                 <li><a href="https://www.behance.net/GenevieveLacroix/">Background Artwork from Genevieve Lacroix</a></li>
             </ul>,
         description: "This is my Portfolio. What you are looking at!",
