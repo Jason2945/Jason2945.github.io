@@ -86,41 +86,20 @@ body, html {
     align-items: center;
 }
 
-@media screen and (max-width: 1200px) {
-    .Navbar_Links {
-        display: flex;
-        width: 50%;
-        height: 100%;
-        padding-left: 1%;
-        justify-content: space-between;
-        align-items: center;
-    }
-}
-
-@media screen and (max-width: 850px) {
-    .Navbar_Links a{
-        height: 100%;
-        width: 100%;
-        font-size: 12px;
-    }
-}
-
-@media screen and (max-width: 600px) {
-    .Navbar_Links a{
-        height: 100%;
-        width: 100%;
-        font-size: 10px;
-    }
-}
-
 .Navbar_Links button {
     height: 100%;
     width: 100%;
-    font-size: 1em;
+    font-size: 1.5em;
     color: aquamarine;
     background: none;
     border: hidden;
     cursor: pointer;
+}
+
+@media only screen and (max-height:800px) {
+    .Navbar_Links button {
+        font-size: 1em;
+    }
 }
 
 .NavLinks button:hover {
@@ -132,22 +111,12 @@ body, html {
     width: 20%;
     height: 90%;
     justify-content: space-between;
-    padding-right: 1%;
+    padding-right: 2%;
 }
 
 .Connect_Logos a{
     display: flex;
     height: 100%;
-}
-
-@media screen and (max-width: 1200px) {
-    .Connect_Logos {
-        display: flex;
-        width: 20%;
-        height: 60%;
-        justify-content: space-between;
-        padding-right: 1%;
-    }
 }
 
 .Connect_Logos img{
@@ -183,15 +152,6 @@ body, html {
     text-align: center;
     user-select: none;
     animation: blinking 3s infinite;
-}
-
-@media screen and (max-width: 700px) {
-    .homepage_container h1{
-        font-size: 5em;
-        color: gold;
-        user-select: none;
-        animation: blinking 3s infinite;
-    }
 }
 
 /* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
@@ -308,47 +268,6 @@ body, html {
     }
 }
 
-
-@media screen and (max-width: 720px) {
-    .project_links button{
-        font-size: .7em;
-    }
-
-    .project_info_container{
-        font-size: 1em;
-    }
-
-    .project_info_container h2{
-        font-size: 1em;
-        height: 20vh;
-        padding-right: 1vw;
-    }
-
-    .project_info h1{
-        font-size: 25px;
-    }
-     
-    #project_description{
-        width: 30vw;
-        height: auto;
-        margin-left: 10vw;
-        font-size: 1em;
-    }
-    
-    .project_link {
-        display: flex;
-        color: #E5ECE9;
-        animation: pulse 2s infinite;
-    }
-
-    .project_techs li{
-        font-size: 12px;
-    }
-
-    .project_techs img{
-        height: 30px;
-    }
-}
 /* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 
 .journey_container{
@@ -370,18 +289,6 @@ body, html {
 
 .timeline p{
     font-size: 1.3rem;
-}
-
-@media screen and (max-width: 1022px) {
-    .timeline h1{
-        font-size: 1.2rem;
-    }
-    .timeline h2{
-        font-size: 1rem;
-    }
-    .timeline p{
-        font-size: .8rem;
-    }
 }
 
 /* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
@@ -411,12 +318,6 @@ body, html {
 
 .resumeImg{
     height: 95%;
-}
-
-@media screen and (max-width: 715px) {
-    .resumeImg{
-        height: 70%;
-    }
 }
 
 .resume_download_link{
