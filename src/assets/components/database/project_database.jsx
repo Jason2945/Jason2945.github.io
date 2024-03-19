@@ -8,8 +8,9 @@ import js_logo from "../../imgs/svg_imgs/js_logo.svg"
 export const project_database = [
     {
         name: 'My Portfolio',
+        id : 1,
         technologies: 
-            <ul className="project_techs">
+            <ul className="Project_Techs">
                 <li>Vite <img src={vite_logo}/> </li>
                 <li>React <img src={react_logo}/> </li>
                 <li>HTML <img src={html_logo}/></li>
@@ -22,8 +23,9 @@ export const project_database = [
     },
     {
         name: 'JavaScript Calculator',
+        id : 2,
         technologies: 
-            <ul className="project_techs">
+            <ul className="Project_Techs">
                 <li>HTML <img src={html_logo}/></li>
                 <li>CSS <img src={css_logo}/></li>
                 <li>JavaScript <img src={js_logo}/></li>
@@ -34,8 +36,9 @@ export const project_database = [
     },
     {
         name: 'Old School Space Shooter',
+        id : 3,
         technologies: 
-            <ul className="project_techs">
+            <ul className="Project_Techs">
                 <li>Vite <img src={vite_logo}/> </li>
                 <li>React <img src={react_logo}/> </li>
                 <li>HTML <img src={html_logo}/></li>
@@ -48,6 +51,7 @@ export const project_database = [
     },
     {
         name: 'Not Netflix',
+        id : 4,
         technologies: '',
         description: 'I am currently working on this project. Will be updated when completed!',
         link: '',
@@ -55,6 +59,7 @@ export const project_database = [
     },
     {
         name: 'Coming Soon',
+        id : 5,
         technologies: '',
         description: 'Any interesting projects I make in the future will be updated here!',
         link: '',

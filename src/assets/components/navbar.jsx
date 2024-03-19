@@ -1,4 +1,4 @@
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import github_logo from '../imgs/svg_imgs/github_logo.svg';
 import linkedin_logo from '../imgs/svg_imgs/linkedin_logo.svg';
@@ -6,18 +6,15 @@ import gmail_logo from '../imgs/svg_imgs/gmail_logo.svg'
 
 export default function Navbar(){
 
-    // useLocation is to find current location
-    const location = useLocation();
-
     return (
-        <div className='Navbar'>
-            {/* Links to goto different routes */}
-            <div className='Navbar_Links'>
+        <div className='NavBar'>
+            {/* Links to go-to different routes */}
+            <div className='NavBar_Links'>
                 <Link to={'/'}>
                     <button>Home</button>
                 </Link>
 
-                <Link to={'/projects'}>
+                <Link to={'/projects/1'}>
                     <button>Projects</button>
                 </Link>
 
@@ -30,8 +27,8 @@ export default function Navbar(){
                 </Link>
             </div>
 
-            {/* Links to logos */}
-            <div className='Connect_Logos'>
+            {/* Links To Connect */}
+            <div className='Logo_Container'>
                 <a href="https://github.com/Jason2945" target="_blank">
                     <img src={github_logo}/>
                 </a>

@@ -1,6 +1,6 @@
 import resume_img from "../imgs/resume_img.png"
-import resume_download from "../imgs/Jason_Resume.pdf"
-import download_img from "../imgs/svg_imgs/download_img.svg"
+import resume_download from "../imgs/resume.pdf"
+import download_img from "../imgs/svg_imgs/download_logo.svg"
 
 import background_img from "../imgs/background.gif"
 import Navbar from './navbar';
@@ -8,21 +8,17 @@ import Navbar from './navbar';
 export default function Resume(){
     return(
         <>
-            <div className="resume_container">
-                {/* Load in the Navigation bar */}
+            <div className="Resume">
                 <Navbar/>
-                {/* Load in the video background */}
-                <div className="project_overlay"></div>
-                <img className='background' src={background_img} />
-                <div className="resume_content">
-                    <a className="resumeImgContainer" href={resume_img} target="_blank">
-                        <img className="resumeImg" src={resume_img} alt="my_resume"/>
-                    </a>
+                <div className="Background_Overlay"></div>
+                <img className='Background' src={background_img} />
+                <a className="Resume_Img" href={resume_img} target="_blank">
+                    <img src={resume_img} alt="My_Resume"/>
+                </a>
 
-                    <a className="resume_download_link" href={resume_download} download>
-                        <img className="resume_download" src={download_img} />
-                    </a>
-                </div>
+                <a className="Download_Resume" href={resume_download} download>
+                    <img src={download_img} />
+                </a>
             </div>
         </>
         

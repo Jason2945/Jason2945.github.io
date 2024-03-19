@@ -1,4 +1,4 @@
-export const journeyInfo = [
+export const Journey_Database = [
     {
         title: "September 2011 - June 2015",
         cardTitle: "Where it all Started",

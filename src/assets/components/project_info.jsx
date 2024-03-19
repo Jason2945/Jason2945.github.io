@@ -1,33 +1,35 @@
-import { useState } from 'react';
+import { project_database } from './database/project_database.jsx';
 import { useParams } from 'react-router-dom';
-import { project_database } from './database/project_database';
 
 export default function Project_Info(){
 
-    {/*Store the id of each project for the child paths*/}
-    const { id } = useParams()
-
-    {/*This const allows projectId to be used instead of constant id to be used when switching pages */}
-    const [projectId] = useState(parseInt(id, 10) - 1);
+    const { id } = useParams();
+    const curr_project = project_database.find(project => project.id === parseInt(id, 10));
 
     return(
-        <div className="project_info">
-            <h1>{project_database[projectId].name}</h1>
-            <div className="info_container">
+        <div className="Project_Info">
+            <h1>{curr_project.name}</h1>
+            <div className="Info_Container">
+                <div className='Technology_Used'>
+                    <h2>
+                        Technologies Used:
+                    </h2>
+                    <p> 
+                        {curr_project.technologies}
+                    </p>
+                </div>
+                
 
-                <p>
-                    Technologies Used: 
-                    <br></br> <br></br>
-                    {project_database[projectId].technologies}
-                </p>
+                <div className='Project_Description'>
+                    <h2>
+                        Description:
+                    </h2>
 
-                <p id='project_description'>
-                    Description: 
-                    <br></br> <br></br>
-                    {project_database[projectId].description}
-                    <br></br> <br></br> 
-                    <a className='project_link' href={project_database[projectId].link} target="_blank"> {project_database[projectId].linkText} </a>
-                </p>
+                    <p>
+                        {curr_project.description}
+                        <a href={curr_project.link} target="_blank"> {curr_project.linkText} </a>
+                    </p>
+                </div>
             </div>
         </div>
     )

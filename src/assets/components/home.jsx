@@ -1,17 +1,16 @@
 import background_img from "../imgs/background.gif"
-import Navbar from './navbar';
+import Navbar from './navbar.jsx';
 
 export default function Home() {
 
     return (
-      <div className="homepage_container">
+      <div className="Homepage">
         {/* Load in the Navigation bar */}
         <Navbar/>
-        {/* Load in the video background */}
-        <div className="home_overlay"></div>
-        <img className='background' src={background_img} />
+        <div className="Background_Overlay"></div>
+        <img className='Background' src={background_img} />
         {/* Display the content */}
-        <div className="homepage_content">
+        <div className="Homepage_Content">
           <h1>Welcome To My Portfolio!</h1>
         </div>
       </div>

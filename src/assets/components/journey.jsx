@@ -1,23 +1,21 @@
 import React from "react";
 import { Chrono } from "react-chrono";
-import { journeyInfo } from "./database/journey_info";
-import background_img from "../imgs/background.gif"
+import { Journey_Database } from "./database/journey_database";
+import Background from "../imgs/background.gif"
 import Navbar from './navbar';
 
 export default function Journey(){
     return (
-        <div className="journey_container">
-            {/* Load in the Navigation bar */}
+        <div className="Journey">
             <Navbar/>
-            {/* Load in the video background */}
-            <div className="project_overlay"></div>
-            <img className='background' src={background_img} />
+            <div className="Background_Overlay"></div>
+            <img className='Background' src={Background} />
             {/* Load in the content */}
-            <div className="timeline">
+            <div className="Timeline">
                 <Chrono 
-                    items={journeyInfo}
+                    items={Journey_Database}
                     mode="VERTICAL_ALTERNATING"
-                    disableToolbar='true'
+                    disableToolbar={true}
                     theme={{
                         primary: 'yellow',
                         secondary: 'none',

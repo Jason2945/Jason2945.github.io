@@ -1,13 +1,11 @@
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route, } from 'react-router-dom'
 
 import Home from './assets/components/home';
 import Projects from './assets/components/projects';
 import Project_Info from './assets/components/project_info';
 import Journey from './assets/components/journey';
 import Resume from './assets/components/resume';
-
-
-import { BrowserRouter as Router, Routes, Route, } from 'react-router-dom'
 
 function App() {
 
