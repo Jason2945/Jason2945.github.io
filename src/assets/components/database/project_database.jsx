@@ -52,10 +52,18 @@ export const project_database = [
     {
         name: 'Not Netflix',
         id : 4,
-        technologies: '',
-        description: 'I am currently working on this project. Will be updated when completed!',
-        link: '',
-        linkText: "",
+        technologies: 
+            <ul className="Project_Techs">
+                <li>Vite <img src={vite_logo}/> </li>
+                <li>React <img src={react_logo}/> </li>
+                <li>HTML <img src={html_logo}/></li>
+                <li>CSS <img src={css_logo}/></li>
+                <li>JavaScript <img src={js_logo}/></li>
+                <li><a style={{ color: '#E5ECE9' }} href="https://www.themoviedb.org/?language=en-US/"> The Movie Database API</a></li>
+            </ul>,
+        description: 'This is a makeshift copy of Netflix. It uses TMDB api to pull in popular movies and shows. Clicking on these will give the user the movie name, description, genre, as well as a trailer if one is found',
+        link: 'https://jason2945.github.io/NotNetflix/',
+        linkText: "Try It Out Here!",
     },
     {
         name: 'Coming Soon',
