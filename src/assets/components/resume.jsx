@@ -12,13 +12,16 @@ export default function Resume(){
                 <Navbar/>
                 <div className="Background_Overlay"></div>
                 <img className='Background' src={background_img} />
-                <a className="Resume_Img" href={resume_img} target="_blank">
-                    <img src={resume_img} alt="My_Resume"/>
-                </a>
 
-                <a className="Download_Resume" href={resume_download} download>
-                    <img src={download_img} />
-                </a>
+                <div className="Resume_Content">
+                    <a className="Resume_Img" href={resume_img} target="_blank">
+                        <img src={resume_img} alt="My_Resume"/>
+                    </a>
+
+                    <a className="Download_Resume" href={resume_download} download>
+                        <img src={download_img} />
+                    </a>
+                </div>
             </div>
         </>
         

@@ -8,15 +8,6 @@
     }  
 }
 
-@keyframes amplify {
-    0%, 100%{
-        transform: scale(1);
-    }
-    50%{
-        transform: scale(1.1);
-    }
-}
-
 @keyframes pulse {
     0%, 100%{
         color: yellow;
@@ -25,8 +16,7 @@
     50%{
         color: red;
         transform: scale(.99);
-    }
-    
+    } 
 }
 
 @keyframes rotating {
@@ -64,6 +54,7 @@ body, html {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: 24%;
 }
 
 /************************* CSS For NavBar *************************************/
@@ -71,88 +62,189 @@ body, html {
     /* Make sure NavBar is always on top */
     display: flex;
     position: absolute;
-    width: 94%;
+    width: 98%;
     height: 5%;
     justify-content: space-between;
     align-items: center;
     /* Leave spaces around the NavBar */
-    margin-top: 1%;
-    margin-left: 3%;
-    margin-right: 3%;
+    margin: 1%;
     /* Create a dark transparent background */
     background-color: rgba(0, 0, 0, 0.3);
     /* Make sure it is always in front of other content */
-    z-index: 1;
+    z-index: 10;
 }
 
-.NavBar_Links {
-    display: flex;
-    width: 30%;
-    height: 100%;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.NavBar_Links button{
-    height: 100%;
+.NavBar_Toggle{
     width: 100%;
-    font-size: 1.5em;
-    color: aquamarine;
-    background: none;
-    border: hidden;
-    cursor: pointer;
-    transition: ease-out 1s;
+    height: 100%;
+    margin-left: 10%;
+    background-color: transparent;
+    border: none;
 }
 
-@media only screen and (max-height:800px) {
-    .NavBar_Links button {
-        font-size: 1em;
-    }
+.NavBar_Links{
+    height: 100%;
+    width: auto;
 }
 
 .NavBar_Links button:hover{
     color: greenyellow;
     transform: scale(1.2);
     transition: ease-in 1s;
+    cursor: pointer;
+}
+
+.NavBar_Toggle img{
+    width: 100%;
+    height: 100%; 
+}
+
+.linkContainer {
+    display: none;
+}
+
+.linkContainerOpen {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background-color: green;
+}
+
+.linkContainerOpen button{
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    color: #FFC0CB;
 }
 
 .Logo_Container {
     display: flex;
-    width: 20%;
-    height: 90%;
-    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 50%;
 }
 
 .Logo_Container a{
-    display: flex;
+    width: 100%;
     height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.Logo_Container img{
+    width: 100%;
+    max-height: 100%;
 }
 
 .Logo_Container a img{
     animation: rotating 5s infinite;
 }
 
-/************************* CSS For Homepage *************************************/
+@media (min-width: 768px) {
 
+    .NavBar_Links{
+        display: flex;
+        width: 70%;
+    }
+
+    .NavBar_Toggle{
+        display: none;
+    }
+
+    .linkContainer{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        align-items: center;
+    }
+
+    .linkContainer button{
+        background-color: transparent;
+        border: none;
+        color: #FFC0CB;
+        font-size: 1.4em;
+    }
+
+    .Logo_Container {
+        width: 20%;
+        justify-content: flex-end;
+        gap: 5%;
+        margin-right: 1%;
+    }
+
+    .Logo_Container a{
+        height: 100%;
+    }
+
+    .Logo_Container img{
+        width: 100%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .linkContainer{
+        margin-left: 5%;
+    }
+}
+
+@media (min-width: 1440px) {
+    .NavBar{
+        height: 7%;
+    }
+
+    .linkContainer button{
+        font-size: 2.5em;
+    }
+
+    .Logo_Container a{
+        height: 100%;
+    }
+
+    .Logo_Container img{
+        height: 80%;
+    }
+}
+
+@media (min-width: 2560px) {
+    .NavBar{
+        height: 10%;
+    }
+
+    .linkContainer button{
+        font-size: 3em;
+    }
+}
+/************************* CSS For Homepage *************************************/
 .Homepage {
     position: relative;
     width: 100vw;
     height: 100vh;
 }
 
-.Homepage_Content {
+.Homepage_Content{
     position: absolute;
     width: 100%;
     height: 100%;
     top: 0;
     display: flex;
-    justify-content: center;
     align-items: center;
-    font-size: 3em;
-    color: gold;
+    justify-content: center;
     text-align: center;
     user-select: none;
+    color: gold;
     animation: blinking 1.5s infinite;
+}
+
+@media (min-width: 768px) {
+    .Homepage_Content{
+        font-size: 3em;
+    }
+}
+
+@media (min-width: 1440px) {
+    .Homepage_Content{
+        font-size: 5em;
+    }
 }
 
 /************************* CSS For Projects *************************************/
@@ -168,123 +260,168 @@ body, html {
 .Project_Links {
     display: flex;
     position: absolute;
-    flex-direction: column;
     top: 10%;
-    width: 15vw;
-    height: 90vh;
-    margin-left: 1%;
-}
-
-.Project_Links a{
     width: 100%;
-    height: 8vh;
-    display: flex;
-    align-items: center;
+    height: 90%;
     justify-content: center;
-    margin-top: 2vh;
-    margin-bottom: 2vh;
-    text-decoration: none;
 }
 
-.Project_Links button{
-    background: none;
+.Project_Toggle{
+    position: absolute;
+    top: 2%;
+    background-color: transparent;
     border: none;
-    font-size: 2rem;
-    width: 90%;
-    height: 8vh;
-    color:#82FF9E;
+    color: #82FF9E;
+    font-size: 1.2em;
     cursor: pointer;
 }
 
-.Project_Links button:hover{
-    color: red;
-    animation: pulse 2s infinite;
+.projectContainer{
+    display: none;
 }
 
-.Project_Info {
+.projectContainerOpen {
     display: flex;
     flex-direction: column;
     position: absolute;
-    top: 10vh;
-    left: 25vw;
-    width: 70vw;
+    top: 15%;
+    align-items: center;
 }
 
-.Project_Info h1{
-    color: lawngreen;
-    font-size: 5em;
-    margin-bottom: 2%;
+.projectContainerOpen a{
+    width: 100%;
+    height: 50%;
 }
 
-.Info_Container{
+.projectContainerOpen a button{
+    color: #82FF9E;
+    background-color: transparent;
+    border: none;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    width: 100%;
+    height: 100%;
+}
+
+.projectContainerOpen a button:hover{
+    color: pink;
+    cursor: pointer;
+    animation: pulse 2s infinite;
+}
+
+.Project_Info{
     display: flex;
-    color: beige;
+    position: absolute;
+    top: 25%;
+    left: 0%;
+    width: 100vw;
+    height: 70vh;
+}
+
+.Project_Info h2{
+    font-size: 1em;
+    margin-bottom: 5%;
+    color: azure;
 }
 
 .Technology_Used{
-    width: 20vw;
-    height: 60vh;
-}
-
-.Technology_Used h2{
-    margin-bottom: 5%;
-    font-size: 3em;
-}
-
-.Project_Techs li{
-    display: flex;
-    list-style: none;
-    margin-bottom: 3%;
-    align-items: center;
-    font-size: 1.5em;
-}
-
-.Project_Techs li img{
+    width: 50%;
+    height: 100%;
     margin-left: 5%;
+    margin-right: 5%;
+    color: azure;
 }
 
 .Project_Description{
-    width: 50vw;
-    height: 60vh;
-}
-
-.Project_Description h2{
-    margin-bottom: 5%;
-    font-size: 3em;
-}
-
-.Project_Description p{
+    width: 50%;
+    margin-left: 5%;
+    margin-right: 5%;
+    color: azure;
     display: flex;
     flex-direction: column;
-    font-size: 1.5em;
 }
 
-.Project_Description p a{
-    margin-top: 5%;
-    color: #E5ECE9;
+.Project_Techs {
+    font-size: .7em;
+    list-style: none;
+    height: 90%;
 }
 
-@media screen and (max-width: 1500px) {
-    .Project_Links button{
-        font-size: 1.25em;
+.Project_Techs li{
+    margin-top: 7%;
+}
+
+.Project_Techs img{
+    height: 10px;
+}
+
+.Project_Description a{
+    margin-top: 10%;
+    color: azure;
+}
+
+@media (min-width:768px){
+    .Project_Toggle{
+        font-size: 2.5em;
     }
 
-    .Project_Info h1{
+    .projectContainerOpen button{
+        font-size: 1.5em;
+    }
+
+    .Project_Info h2{
+        font-size: 1.5em;
+    }
+
+    .Project_Techs{
+        font-size: 1em;
+    }
+
+    .Project_Techs img{
+        height: 30px;
+    }
+
+    .Project_Description p{
+        font-size: 1.5em;
+    }
+
+    .Project_Description a{
+        font-size: 1.5em;
+    }
+}
+
+@media (min-width:1440px){
+    .Project_Toggle{
+        margin-top: 1%;
         font-size: 3em;
     }
 
-    .Technology_Used h2{
+    .Project_Info h2{
+        font-size: 2.5em;
+    }
+
+    .Project_Techs{
         font-size: 2em;
     }
 
-    .Project_Description{
-        margin-left: 10%;
+    .Project_Techs li{
+        margin-top: 2%;
+        margin-bottom: 3%;
     }
 
-    .Project_Description h2{
+    .Project_Techs img{
+        height: 30px;
+    }
+
+    .Project_Description p{
+        font-size: 2em;
+    }
+
+    .Project_Description a{
         font-size: 2em;
     }
 }
+
 /************************* CSS For Journey *************************************/
 
 .Journey {
@@ -318,30 +455,49 @@ body, html {
     user-select: none;
 }
 
-.Resume_Img {
-    display: flex;
+.Resume_Content{
     position: absolute;
-    top: 10vh;
+    top: 20vh;
+    left: 0;
     width: 100vw;
-    height: 90vh;
+    height: 80vh;
+    display: flex;
+    align-items: flex-end;
     justify-content: center;
 }
 
-.Resume_Img img{
-    height: 95%;
+.Resume_Img{
+    display: none;
 }
 
-.Download_Resume {
-    display: flex;
-    position: absolute;
-    top: 88.5vh;
-    left: 70vw;
-    width: 7vw;
-    height: 7vh;
+.Download_Resume{
+    height: 50%;
+    width: 50%;
+    background-color: greenyellow;
+    margin-bottom: 3%;
 }
 
 .Download_Resume img{
-    background-color: #82FF9E;
-    width: 50%;
     height: 100%;
+    width: 100%;
+}
+
+@media (min-width:768px) {
+
+    .Resume_Img{
+        display: flex;
+        height: 100%;
+        margin-bottom: 3%;
+    }
+
+    .Resume_Img img{
+        height: 100%;
+        margin-bottom: 3%;
+    }
+
+    .Download_Resume{
+        height: 10%;
+        width: 10%;
+    }
+    
 }

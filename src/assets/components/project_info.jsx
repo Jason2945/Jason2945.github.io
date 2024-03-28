@@ -8,28 +8,22 @@ export default function Project_Info(){
 
     return(
         <div className="Project_Info">
-            <h1>{curr_project.name}</h1>
-            <div className="Info_Container">
-                <div className='Technology_Used'>
-                    <h2>
-                        Technologies Used:
-                    </h2>
-                    <p> 
-                        {curr_project.technologies}
-                    </p>
-                </div>
+            <div className='Technology_Used'>
+                <h2>
+                    Technologies Used:
+                </h2>
+                {curr_project.technologies}
+            </div>
                 
 
-                <div className='Project_Description'>
-                    <h2>
-                        Description:
-                    </h2>
+            <div className='Project_Description'>
+                <h2>
+                    Description:
+                </h2>
 
-                    <p>
-                        {curr_project.description}
-                        <a href={curr_project.link} target="_blank"> {curr_project.linkText} </a>
-                    </p>
-                </div>
+                <p>{curr_project.description}</p>
+                <a href={curr_project.link} target="_blank"> {curr_project.linkText} </a>
+
             </div>
         </div>
     )
